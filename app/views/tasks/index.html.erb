@@ -1,0 +1,44 @@
+<div class="container pt-5">
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+
+
+  <li class='row'>
+    <% if task.completed == true %>
+    <i class="far fa-check-square"> </i>
+    <% else  %>
+    <i class="far fa-square"> </i>
+    <% end %>
+
+<!--   <label class="container">Done?
+  <input type="checkbox" checked="unchecked">
+  <span class="checkmark"></span> -->
+  <%= link_to(task.title, task_path(task.id), class:"list-group-item list-group-item-action" ) %>
+  </li>
+  </label>
+
+</ul>
+<br>
+
+<% end %>
+<br>
+<br>
+<div class="d-flex justify-content-center">
+
+<%= link_to "Create", tasks_new_path, class:"btn btn-secondary w-50 "%>
+</div>
+</div>
+
+
+
+<!-- <label class="container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Two
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+ -->

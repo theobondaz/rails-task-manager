@@ -1,0 +1,18 @@
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <strong class="title"><%= f.label :title %></strong>
+    <%= f.text_field :title, class: 'form-control w-50' %>
+  </div>
+
+  <div class="form-group">
+    <strong class='title'><%= f.label :details %></strong>
+    <%= f.text_field :details, class: 'form-control w-50' %>
+  </div>
+
+  <div class="form-group row">
+     <strong class='title'><%= f.label :completed %></strong>
+    <%= f.check_box :completed, class:"form-control w-25"%>
+  </div>
+  <br>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
